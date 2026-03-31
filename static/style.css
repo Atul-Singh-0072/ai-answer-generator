@@ -1,0 +1,202 @@
+body {
+    font-family: "Times New Roman", serif;
+    background: linear-gradient(135deg, #4e73df, #1cc88a);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding: 40px 0;
+}
+
+/* ========================= */
+/* CONTAINER */
+/* ========================= */
+
+.container {
+    background: white;
+    padding: 40px;
+    border-radius: 18px;
+    width: 700px;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.25);
+    transition: 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-4px);
+}
+
+h1 {
+    margin-bottom: 30px;
+    color: #2c3e50;
+    text-align: center;
+}
+
+/* ========================= */
+/* FORM INPUTS */
+/* ========================= */
+
+input[type="file"] {
+    margin-top: 8px;
+    margin-bottom: 18px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    outline: none;
+    transition: 0.3s;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+input[type="text"]:focus {
+    border-color: #4e73df;
+    box-shadow: 0 0 8px rgba(78,115,223,0.4);
+}
+
+/* ========================= */
+/* BUTTONS */
+/* ========================= */
+
+button {
+    padding: 12px 25px;
+    background: #4e73df;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s ease;
+    margin-bottom: 15px;
+}
+
+button:hover {
+    background: #2e59d9;
+    transform: scale(1.05);
+}
+
+/* Differentiate Upload Button */
+button[name="upload_btn"] {
+    background: #1cc88a;
+}
+
+button[name="upload_btn"]:hover {
+    background: #17a673;
+}
+
+/* ========================= */
+/* STATUS MESSAGE */
+/* ========================= */
+
+.message-box {
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background: #fff3cd;
+    border-left: 6px solid #ffc107;
+    font-size: 14px;
+}
+
+/* ========================= */
+/* ANSWER BOX */
+/* ========================= */
+
+.answer-box {
+    margin-top: 35px;
+    background: #f8f9fc;
+    padding: 25px;
+    border-radius: 14px;
+    text-align: left;
+    max-height: 450px;
+    overflow-y: auto;
+    border-left: 6px solid #4e73df;
+}
+
+.answer-box h2 {
+    margin-top: 0;
+    color: #4e73df;
+}
+
+/* University Formatting */
+
+.formatted-answer {
+    line-height: 1.8;
+    font-size: 16px;
+    color: #2c3e50;
+}
+
+.formatted-answer h3 {
+    margin-top: 25px;
+    margin-bottom: 8px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #ddd;
+    color: #1f2d3d;
+}
+
+/* Definition underline */
+.formatted-answer u {
+    font-weight: bold;
+    font-size: 17px;
+}
+
+/* Horizontal line between sections */
+.formatted-answer hr {
+    margin: 25px 0;
+    border: none;
+    border-top: 1px solid #ccc;
+}
+
+/* Lists */
+.formatted-answer ul,
+.formatted-answer ol {
+    padding-left: 25px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+}
+
+/* Code / Diagram block */
+.formatted-answer pre {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    overflow-x: auto;
+    font-family: monospace;
+    margin-top: 10px;
+}
+
+/* ========================= */
+/* FLOWCHART IMAGE BOX */
+/* ========================= */
+
+.diagram-box {
+    margin-top: 30px;
+    background: #f8f9fc;
+    padding: 25px;
+    border-radius: 14px;
+    border-left: 6px solid #1cc88a;
+    text-align: center;
+}
+
+.diagram-box img {
+    width: 100%;
+    max-width: 650px;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+/* ========================= */
+/* SCROLLBAR */
+/* ========================= */
+
+.answer-box::-webkit-scrollbar {
+    width: 8px;
+}
+
+.answer-box::-webkit-scrollbar-thumb {
+    background: #4e73df;
+    border-radius: 4px;
+}

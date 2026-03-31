@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Answer Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- Mermaid JS -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            mermaid.initialize({
+                startOnLoad: false,
+                theme: "default",
+                securityLevel: "loose"
+            });
+
+            const mermaidBlocks = document.querySelectorAll(".mermaid");
+            if (mermaidBlocks.length > 0) {
+                mermaid.run({
+                    nodes: mermaidBlocks
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+
+<div class="container">
+    <h1>AI Answer Generator 🤖</h1>
+
+    {% if message %}
+        <div class="message-box">
+            {{ message }}
+        </div>
+    {% endif %}
+
+    <form method="POST" enctype="multipart/form-data" class="main-form">
+
+        <div class="section">
+            <h3>📄 Upload PDF</h3>
+            <input type="file" name="pdf_file" accept=".pdf">
+            <button type="submit" name="upload_btn" class="btn upload-btn">
+                Upload PDF
+            </button>
+        </div>
+
+        <hr>
+
+        <div class="section">
+            <h3>❓ Ask Question</h3>
+            <input type="text" name="question" placeholder="Ask your question..." required>
+            <button type="submit" name="ask_btn" class="btn ask-btn">
+                Generate Answer
+            </button>
+        </div>
+
+    </form>
+
+    {% if answer %}
+    <div class="answer-box">
+        <h2>📘 Answer</h2>
+        <div class="formatted-answer">
+            {{ answer | safe }}
+        </div>
+    </div>
+    {% endif %}
+
+    {% if flowchart %}
+    <div class="diagram-box">
+        <h2>📊 Flowchart Diagram</h2>
+
+        <div class="mermaid">
+{{ flowchart | safe }}
+        </div>
+
+    </div>
+    {% endif %}
+
+</div>
+
+</body>
+</html>
