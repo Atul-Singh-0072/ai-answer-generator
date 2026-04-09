@@ -152,17 +152,15 @@ Critic refines the response
 Diagram agent (optional) generates visuals
 📸 Screenshots
 
-Add your screenshots here
 
 ![Upload UI](![WhatsApp Image 2026-04-09 at 4 36 36 PM](https://github.com/user-attachments/assets/b061f5ba-12c3-4a4d-9d0f-320d208cc174)
 )
-![Answer Output](![WhatsApp Image 2026-04-09 at 5 07 21 PM](https://github.com/user-attachments/assets/ffec4168-b984-4ea3-99d6-d1002a70da30)
-)
+
 🎥 Demo Video
 
-Add your demo video link here
-
 [Watch Demo](https://drive.google.com/file/d/17lcQ97AjZ_btw1kzOiu71sSvGAirv_XM/view?usp=drivesdk)
+
+
 💡 Use Cases
 📚 Educational Q&A systems
 🏢 Enterprise document search
